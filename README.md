@@ -1,4 +1,26 @@
-# Data Project README file
+# Data Engineering Bootcamp - DataExpert.io 
+### Curricula
+-	Dimensional Data Modeling
+-	Fact Data Modeling
+-	Applying Analytical Patterns 
+-	KPIs and Experimentation
+-	Data Visualization and Impact
+-	Unit Testing PySpark Pipelines
+-	Data Pipeline Maintenance
+-	Apache Spark Fundamentals
+-	Data Quality Patterns
+-	Real time pipelines with Flink and Kafka
+
+
+There is one lab per lecture/video.
+- Main Page: https://bootcamp.techcreator.io/dashboard
+- GitHub Repo: https://github.com/DataExpert-io/data-engineer-handbook
+- Lessons: https://bootcamp.techcreator.io/lessons
+
+Check the github for installation instructions.
+
+
+---
 
 The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
 Bearing that in mind, your job is to: 
