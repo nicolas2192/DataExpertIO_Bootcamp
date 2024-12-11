@@ -14,8 +14,8 @@
 
 There is one lab per lecture/video.
 - Main Page: https://bootcamp.techcreator.io/dashboard
-- GitHub Repo: https://github.com/DataExpert-io/data-engineer-handbook
 - Lessons: https://bootcamp.techcreator.io/lessons
+- GitHub Repo: https://github.com/DataExpert-io/data-engineer-handbook
 
 Check the github for installation instructions.
 
