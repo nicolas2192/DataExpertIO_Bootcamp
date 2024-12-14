@@ -1,5 +1,5 @@
 # Data Engineering Bootcamp - DataExpert.io 
-### Curricula
+#### Curricula
 -	Dimensional Data Modeling
 -	Fact Data Modeling
 -	Applying Analytical Patterns 
@@ -17,7 +17,53 @@ There is one lab per lecture/video.
 - Lessons: https://bootcamp.techcreator.io/lessons
 - GitHub Repo: https://github.com/DataExpert-io/data-engineer-handbook
 
-Check the github for installation instructions.
+
+## Dimesional Modeling
+There are three types of data modeling:
+- OLTP: Transactional. Follows 3rd normal form. Minimize reduncacy. Optimized for writing into the database.
+- OLAP: Analytical. Typical dimensional modeling. Optimized for reading from the tables.
+- Master Data: Middle ground between OLTP and OLAP. These are the layers between your source/raw tables and your semantic model.
+
+### Cumulative Tables
+Also known as incremental. These tables track full history. When creating this table, you should perform a `full outer join` because you might have data from the past that is not present today, and current data that wasnt present in the past. Basically, you are doing a union between what you had and the new data.
+
+### Compactness vs Usability
+This tradeoff comes into play when designing and creating tables for different purposes.
+
+The most usable:
+- Have no complex data types.
+- Can be easily manipuladed with where and group by.
+This type of table is used when latency and data volumnes matter a lot. These tables are consumed by highly technical engineers or transactional applications.
+
+The most compact:
+- Compressed to be as small as possible and cant be queried directly until they are decoded.
+Tables used for analytical task mainly. The user is a business analyst or dashboard.
+
+The middle ground:
+- Use complex data types (arrays, struct, map, etc) making wuerying trickier but also more compact.
+Upstream staging and master data tables that are the input for another tables.
+
+### Master Tables Data Types
+Struct: Keys are rigidly definded, compression is good. Values can be of any type. This is like a table within a table. 
+Map: Keys are loosely defined. Compression is ok. All values have to be of the same type.
+Array: Ordinal. List of values that all have to be of the same type.
+
+### Run-length encoding compression
+Compresion method for datasets that are not in a normalized format. To make this work, data should be sorted. Otherwise, if rows are shuffled, data cannot be encoded. 
+
+### LAB 1: Cumulative Table Design
+Github Lab: https://github.com/DataExpert-io/cumulative-table-design
+
+
+
+  
+
+
+  
+
+
+
+
 
 
 ---
